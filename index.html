@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GREENERY</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/daisyui/2.46.1/full.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favi.png">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/script.js" defer></script>
+
+</head>
+
+<body>
+
+  <!-- cursor -->
+  <div class="curzr" hidden>
+    <div class="circle"></div>
+    <div class="dot"></div>
+  </div>
+
+
+  <div class="flex">
+    <!-- side menu -->
+    <div class="side-menu pt-14 relative z-20">
+      <ul class="menu p-2 rounded-box">
+        <li class="btn-home">
+          <div class="tooltip tooltip-right" data-tip="Mainpage">
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              </svg>
+            </div>
+          </div>
+        </li>
+        <li class="btn-project-list">
+          <div class="tooltip tooltip-right" data-tip="Only Project List">
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+          </div>
+        </li>
+        <li>
+          <label class="tooltip tooltip-right" data-tip="Skills" for="skill-modal">
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+            </div>
+          </label>
+        </li>
+      </ul>
+    </div>
+
+    <!-- main -->
+    <div class="flex flex-col max-h-screen min-h-screen px-4 flex-grow">
+      <!-- top bar -->
+      <div class="navbar">
+        <div class="flex-1">
+          <a class="btn__side-menu btn btn-ghost normal-case">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              class="inline-block w-5 h-5 stroke-current">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+              </path>
+            </svg>
+          </a>
+          <a class="btn btn-ghost normal-case text-xl" href="./index.html">GREENERY 🍀</a>
+        </div>
+        <div class="flex-none mr-4 theme-swap-btn">
+          <div>
+            <label class="swap swap-rotate">
+              <input type="checkbox" />
+              <svg class="swap-off fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
+              </svg>
+              <svg class="swap-on fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
+              </svg>
+            </label>
+          </div>
+        </div>
+      </div>
+      <!-- contents -->
+      <div class="flex-grow flex flex-col gap-4 overflow-auto">
+        <!-- contents__info -->
+        <div class="contents__info flex-shrink-0">
+          <div class="stats shadow w-full">
+            <div class="stat">
+              <div class="stat-figure text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  class="inline-block w-8 h-8 stroke-current">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+                  </path>
+                </svg>
+              </div>
+              <div class="stat-title">Welcome to my Lovers</div>
+              <div class="stat-value text-primary">25.6K</div>
+              <div class="stat-desc">21% more than last month</div>
+            </div>
+
+            <div class="stat">
+              <div class="stat-figure text-secondary">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  class="inline-block w-8 h-8 stroke-current">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z">
+                  </path>
+                </svg>
+              </div>
+              <div class="stat-title">Total Projects</div>
+              <div class="stat-value text-secondary">2.6M</div>
+              <div class="stat-desc">keep on adding continuosly</div>
+            </div>
+
+            <div class="stat">
+              <div class="stat-figure text-secondary">
+                <div class="avatar online">
+                  <div class="w-16 rounded-full">
+                    <img src="./img/profile.jpg" alt="profile" />
+                  </div>
+                </div>
+              </div>
+              <div class="stat-value">GREENERY</div>
+              <div class="stat-title">Web Publisher</div>
+              <div class="stat-desc text-secondary">07_mz@naver.com</div>
+            </div>
+
+          </div>
+        </div>
+        <!-- contents__chat -->
+        <div class="contents__chat bg-gray-100 bg-opacity-30 rounded-2xl shadow p-4 overflow-x-hidden flex-1">
+
+          <div class="chat chat-start" data-aos="fade-right">
+            <div class="chat-image avatar">
+              <div class="w-10 rounded-full">
+                <img src="./img/profile.jpg" alt="profile" />
+              </div>
+            </div>
+            <div class="chat-bubble">안녕하세요! 계속해서 찾고 싶고, 성장하는 개자이너 김민지입니다. 반갑습니다! 🥰</div>
+          </div>
+          <div class="chat chat-start" data-aos="fade-right" data-aos-delay="800">
+            <div class="chat-image avatar">
+              <div class="w-10 rounded-full">
+                <img src="./img/profile.jpg" alt="profile" />
+              </div>
+            </div>
+            <div class="chat-bubble">사용자 입장에서 바라보고 디자인하는 것이 가장 중요하다고 생각합니다.</div>
+          </div>
+          <div class="chat chat-start" data-aos="fade-right" data-aos-delay="1600">
+            <div class="chat-image avatar">
+              <div class="w-10 rounded-full">
+                <img src="./img/profile.jpg" alt="profile" />
+              </div>
+            </div>
+            <div class="chat-bubble">사용자와 클라이언트의 입장에서 바라보며 이해하고 소통하여 예쁘고 화려하기만한 디자인 보다는, 남녀노소 누구나 사용하기 간편한 디자인을 하고
+              싶습니다.
+            </div>
+          </div>
+
+          <div class="chat chat-start" data-aos="fade-right" data-aos-delay="2400">
+            <div class="chat-image avatar">
+              <div class="w-10 rounded-full">
+                <img src="./img/profile.jpg" alt="profile" />
+              </div>
+            </div>
+            <div class="chat-bubble">이런 제가 마음에 드신다면 편히 연락 주세요! 🤗 코딩은 더 자신있어요!</div>
+          </div>
+          <div class="chat chat-end" data-aos="fade-left" data-aos-delay="3000">
+            <div class="chat-bubble">
+              <label for="email-modal" class="btn btn-primary">함께 일해요 💌</label>
+            </div>
+          </div>
+        </div>
+        <!-- project-table -->
+        <div class="w-full overflow-x-auto flex-1">
+          <table class="project-table table w-full relative">
+            <thead class="sticky z-10 inset-0">
+              <tr>
+                <th>PROJECT</th>
+                <th>PARTICIPATION IN WORK</th>
+                <th>DATE</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="flex items-center space-x-3">
+                    <div class="avatar">
+                      <div class="mask mask-squircle w-12 h-12">
+                        <img src="./img/goncha.jpg" alt="Avatar Tailwind CSS Component" />
+                      </div>
+                    </div>
+                    <div>
+                      <div class="font-bold flex items-center project-name">포트폴리오 페이지</div>
+                      <div class="text-sm opacity-50">WEB DESIGN&CODING</div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  CODING 100%
+                  <br />
+                  <span class="badge badge-ghost badge-sm">HTML</span>
+                  <span class="badge badge-ghost badge-sm">CSS</span>
+                  <span class="badge badge-ghost badge-sm">JAVSCRIPT</span>
+                </td>
+                <td class="project-date">2023-03-07</td>
+                <th>
+                  <label for="my-modal-1" class="btn btn-ghost btn-sm">open modal</label>
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <div class="flex items-center space-x-3">
+                    <div class="avatar">
+                      <div class="mask mask-squircle w-12 h-12">
+                        <img src="./img/goncha.jpg" alt="Avatar Tailwind CSS Component" />
+                      </div>
+                    </div>
+                    <div>
+                      <div class="font-bold flex items-center project-name">포트폴리오 페이지</div>
+                      <div class="text-sm opacity-50">WEB DESIGN&CODING</div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  CODING 100%
+                  <br />
+                  <span class="badge badge-ghost badge-sm">HTML</span>
+                  <span class="badge badge-ghost badge-sm">CSS</span>
+                  <span class="badge badge-ghost badge-sm">JAVSCRIPT</span>
+                </td>
+                <td class="project-date">2023-03-07</td>
+                <th>
+                  <label for="my-modal-2" class="btn btn-ghost btn-sm">open modal</label>
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <div class="flex items-center space-x-3">
+                    <div class="avatar">
+                      <div class="mask mask-squircle w-12 h-12">
+                        <img src="./img/goncha.jpg" alt="Avatar Tailwind CSS Component" />
+                      </div>
+                    </div>
+                    <div>
+                      <div class="font-bold flex items-center project-name">포트폴리오 페이지</div>
+                      <div class="text-sm opacity-50">WEB DESIGN&CODING</div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  CODING 100%
+                  <br />
+                  <span class="badge badge-ghost badge-sm">HTML</span>
+                  <span class="badge badge-ghost badge-sm">CSS</span>
+                  <span class="badge badge-ghost badge-sm">JAVSCRIPT</span>
+                </td>
+                <td class="project-date">2023-03-07</td>
+                <th>
+                  <label for="my-modal-2" class="btn btn-ghost btn-sm">open modal</label>
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <div class="flex items-center space-x-3">
+                    <div class="avatar">
+                      <div class="mask mask-squircle w-12 h-12">
+                        <img src="./img/goncha.jpg" alt="Avatar Tailwind CSS Component" />
+                      </div>
+                    </div>
+                    <div>
+                      <div class="font-bold flex items-center project-name">포트폴리오 페이지</div>
+                      <div class="text-sm opacity-50">WEB DESIGN&CODING</div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  CODING 100%
+                  <br />
+                  <span class="badge badge-ghost badge-sm">HTML</span>
+                  <span class="badge badge-ghost badge-sm">CSS</span>
+                  <span class="badge badge-ghost badge-sm">JAVSCRIPT</span>
+                </td>
+                <td class="project-date">2023-03-07</td>
+                <th>
+                  <label for="my-modal-2" class="btn btn-ghost btn-sm">open modal</label>
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <div class="flex items-center space-x-3">
+                    <div class="avatar">
+                      <div class="mask mask-squircle w-12 h-12">
+                        <img src="./img/goncha.jpg" alt="Avatar Tailwind CSS Component" />
+                      </div>
+                    </div>
+                    <div>
+                      <div class="font-bold flex items-center project-name">포트폴리오 페이지</div>
+                      <div class="text-sm opacity-50">WEB DESIGN&CODING</div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  CODING 100%
+                  <br />
+                  <span class="badge badge-ghost badge-sm">HTML</span>
+                  <span class="badge badge-ghost badge-sm">CSS</span>
+                  <span class="badge badge-ghost badge-sm">JAVSCRIPT</span>
+                </td>
+                <td class="project-date">2023-03-07</td>
+                <th>
+                  <label for="my-modal-2" class="btn btn-ghost btn-sm">open modal</label>
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <div class="flex items-center space-x-3">
+                    <div class="avatar">
+                      <div class="mask mask-squircle w-12 h-12">
+                        <img src="./img/goncha.jpg" alt="Avatar Tailwind CSS Component" />
+                      </div>
+                    </div>
+                    <div>
+                      <div class="font-bold flex items-center project-name">포트폴리오 페이지</div>
+                      <div class="text-sm opacity-50">WEB DESIGN&CODING</div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  CODING 100%
+                  <br />
+                  <span class="badge badge-ghost badge-sm">HTML</span>
+                  <span class="badge badge-ghost badge-sm">CSS</span>
+                  <span class="badge badge-ghost badge-sm">JAVSCRIPT</span>
+                </td>
+                <td class="project-date">2023-03-07</td>
+                <th>
+                  <label for="my-modal-2" class="btn btn-ghost btn-sm">open modal</label>
+                </th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- skill modal -->
+  
+  <input type="checkbox" id="skill-modal" class="modal-toggle" />
+  <div class="modal">
+    <div class="modal-box w-11/12 max-w-5xl relative">
+      <label for="skill-modal" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+      <h3 class="font-bold text-lg">제가 자신있는 기술은요,</h3>
+      <div class="my-4 flex gap-4">
+        <div class="myskill">
+          <div class="radial-progress text-gray-400" style="--value:90; --size:6rem; --thickness: 2px;">90%</div>
+          <div class="skill-name text-center font-bold mt-2">HTML</div>
+        </div>
+        <div class="myskill">
+          <div class="radial-progress text-gray-400" style="--value:85; --size:6rem; --thickness: 2px;">85%</div>
+          <div class="skill-name text-center font-bold mt-2">CSS</div>
+        </div>
+        <div class="myskill">
+          <div class="radial-progress text-gray-400" style="--value:70; --size:6rem; --thickness: 2px;">70%</div>
+          <div class="skill-name text-center font-bold mt-2">JS(JQUERY)</div>
+        </div>
+        <div class="myskill">
+          <div class="radial-progress text-gray-400" style="--value:80; --size:6rem; --thickness: 2px;">80%</div>
+          <div class="skill-name text-center font-bold mt-2">PHOTOSHOP</div>
+        </div>
+        <div class="myskill">
+          <div class="radial-progress text-gray-400" style="--value:80; --size:6rem; --thickness: 2px;">80%</div>
+          <div class="skill-name text-center font-bold mt-2">FIGMA</div>
+        </div>
+      </div>
+      <p>사실 퍼센트로 표현하기엔 아주 주관적인 수치지만, 적어도 이만큼은 자신있다는 뜻이라고 봐주시면 감사하겠습니다! 😉</p>
+      <p>배우고 성취하는 것을 아주 좋아하는 성격이라 쑥쑥 성장하고 있습니다!</p>
+      <p class="mt-2">p.s. 퍼블리싱 강사 경험이 있어, 기초는 아주 탄탄하답니다. 🤗</p>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- email modal -->
+  <input type="checkbox" id="email-modal" class="modal-toggle" />
+  <div class="modal">
+    <div class="modal-box relative">
+      <label for="email-modal" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+      <h3 class="text-lg font-bold">저에게 메일을 보내주세요!</h3>
+      <form class="form-control w-full my-4" onsubmit="sendEmailForm(this); return false;"
+        action="https://formspree.io/f/xeqwkbkw" method="POST">
+        <label class="label">
+          <span class="label-text">Your Email</span>
+        </label>
+        <input class="input input-bordered w-full" type="email" name="email" placeholder="회신을 원하는 이메일 주소">
+        <label class="label">
+          <span class="label-text">Your Message</span>
+        </label>
+        <textarea class="textarea textarea-bordered" name="message"></textarea>
+        <button class="btn mt-4" type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
+
+
+  <!-- project modals -->
+  <input type="checkbox" id="my-modal-1" class="modal-toggle" />
+  <div class="modal">
+    <div class="modal-box relative">
+      <label for="my-modal-1" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+      <h3 class="text-lg font-bold">포트폴리오 페이지</h3>
+      <p class="py-4">저를 소개하고, 제가 참여했던 프로젝트들과 연습 작품들을 전시할 수 있는 공간입니다. 이 페이지는 계속해서 업데이트 중입니다. tailwind.css와 daisyui를 이용하여
+        구성하였습니다.</p>
+      <p>계속 발전하는 모습 보여드릴 수 있도록 노력하겠습니다.</p>
+      <div class="my-5">
+        <div class="badge">HTML</div>
+        <div class="badge badge-primary">CSS</div>
+        <div class="badge badge-secondary">JAVASCRIPT</div>
+      </div>
+      <div class="mockup-window border border-base-300">
+        <div class="flex justify-center border-t border-base-300">
+          <img src="./img/portfolio.png" alt="portfolio">
+        </div>
+      </div>
+      <br>
+      <div class="btn-group float-right">
+        <button class="btn btn-primary">GITHUB</button>
+        <button class="btn">PAGE</button>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>

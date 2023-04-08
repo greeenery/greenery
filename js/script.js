@@ -1,16 +1,39 @@
+// AOS
 AOS.init({
-  once:true
+  once: true
 });
 
 
-$(".btn-project-list").click(function(){
-  $(".contents__info").addClass("hidden");
-  $(".contents__chat").addClass("hidden");
-});
-$(".btn-home").click(function(){
-  $(".contents__info").removeClass("hidden");
-  $(".contents__chat").removeClass("hidden");
-});
+function NavFunction__init() {
+  // project-list
+  $(".btn-project-list").click(function () {
+    $(".contents__info").addClass("hidden");
+    $(".contents__chat").addClass("hidden");
+  });
+  $(".btn-home").click(function () {
+    $(".contents__info").removeClass("hidden");
+    $(".contents__chat").removeClass("hidden");
+  });
+
+  // btn__side-menu
+  $(".btn__side-menu").click(function () {
+    if ($(".side-menu").hasClass("off")) {
+      $(".side-menu").removeClass("off");
+    } else {
+      $(".side-menu").addClass("off");
+    }
+  });
+
+  // theme
+  $(".theme-swap-btn svg").click(function (event) {
+    if ($("html").attr("data-theme") == "business") {
+      $("html").attr("data-theme", "light");
+    } else {
+      $("html").attr("data-theme", "business");
+    }
+  });
+}
+NavFunction__init();
 
 
 function NewProjectChecker__init() {
@@ -33,33 +56,10 @@ function NewProjectChecker__init() {
 
   }
 }
-
-
 NewProjectChecker__init();
-
-// btn__side-menu
-
-$(".btn__side-menu").click(function () {
-  if ($(".side-menu").hasClass("off")) {
-    $(".side-menu").removeClass("off");
-  } else {
-    $(".side-menu").addClass("off");
-  }
-});
-
-// theme
-
-$(".theme-swap-btn svg").click(function (event) {
-  if ($("html").attr("data-theme") == "business") {
-    $("html").attr("data-theme", "light");
-  } else {
-    $("html").attr("data-theme", "business");
-  }
-});
 
 
 // formspree
-
 function sendEmailForm(form) {
   if (form.email.value.length == 0) {
     alert('이메일 주소를 입력해주세요.');
@@ -84,7 +84,6 @@ function sendEmailForm(form) {
 
 
 // cursor
-
 class BigCircle {
   constructor() {
     this.root = document.body
@@ -193,5 +192,3 @@ class BigCircle {
   }
 
 })()
-
-

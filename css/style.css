@@ -8,21 +8,12 @@
 
 * {
   font-family: "SUIT-Regular";
-  cursor: none !important;
+  /* cursor: none !important; */
 }
 
 
 html {
   transition: background-color 0.3s !important;
-}
-
-.side-menu {
-  transition: margin-left 1s;
-}
-
-
-.side-menu.off {
-  margin-left:-68px;
 }
 
 

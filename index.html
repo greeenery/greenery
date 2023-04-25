@@ -21,15 +21,9 @@
 <body>
 
   <!-- cursor -->
-  <div class="curzr" hidden>
-    <div class="circle"></div>
-    <div class="dot"></div>
-  </div>
-
-
-  <div class="flex">
+  <div class="flex h-screen">
     <!-- side menu -->
-    <div class="side-menu pt-14 relative z-20">
+    <div class="side-menu pt-14 relative z-20 hidden md:block">
       <ul class="menu p-2 rounded-box">
         <li class="btn-home">
           <div class="tooltip tooltip-right" data-tip="Mainpage">
@@ -67,7 +61,7 @@
       </ul>
     </div>
     <!-- main -->
-    <div class="flex flex-col max-h-screen min-h-screen px-4 flex-grow">
+    <div class="flex flex-col px-2 flex-grow">
       <!-- top bar -->
       <div class="navbar">
         <div class="flex-1">
@@ -97,37 +91,10 @@
         </div>
       </div>
       <!-- contents -->
-      <div class="flex-grow flex flex-col gap-4 overflow-auto">
+      <div class="flex-grow flex flex-col gap-4 pb-2 overflow-auto">
         <!-- contents__info -->
         <div class="contents__info flex-shrink-0">
           <div class="stats shadow w-full">
-            <div class="stat">
-              <div class="stat-figure text-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                  class="inline-block w-8 h-8 stroke-current">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
-                  </path>
-                </svg>
-              </div>
-              <div class="stat-title">Welcome to my Lovers</div>
-              <div class="stat-value text-primary">25.6K</div>
-              <div class="stat-desc">21% more than last month</div>
-            </div>
-
-            <div class="stat">
-              <div class="stat-figure text-secondary">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                  class="inline-block w-8 h-8 stroke-current">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z">
-                  </path>
-                </svg>
-              </div>
-              <div class="stat-title">Total Projects</div>
-              <div class="stat-value text-secondary">2.6M</div>
-              <div class="stat-desc">keep on adding continuosly</div>
-            </div>
-
             <div class="stat">
               <div class="stat-figure text-secondary">
                 <div class="avatar online">
@@ -144,7 +111,7 @@
           </div>
         </div>
         <!-- contents__chat -->
-        <div class="contents__chat bg-gray-100 bg-opacity-30 rounded-2xl shadow p-4 overflow-x-hidden flex-1">
+        <div class="contents__chat bg-gray-100 bg-opacity-30 rounded-2xl shadow p-2 overflow-x-hidden flex-grow flex-shrink-0">
 
           <div class="chat chat-start" data-aos="fade-right">
             <div class="chat-image avatar">
@@ -188,13 +155,14 @@
           </div>
         </div>
         <!-- project-table -->
-        <div class="w-full overflow-x-auto flex-1">
+
+        <div class="w-full overflow-x-auto hidden sm:block">
           <table class="project-table table w-full relative">
             <thead class="sticky z-10 inset-0">
               <tr>
                 <th>PROJECT</th>
-                <th>PARTICIPATION IN WORK</th>
-                <th>DATE</th>
+                <th class="hidden md:table-cell">PARTICIPATION IN WORK</th>
+                <th class="hidden lg:table-cell">DATE</th>
                 <th></th>
               </tr>
             </thead>
@@ -208,17 +176,17 @@
                       </div>
                     </div>
                     <div>
-                      <div class="font-bold flex items-center project-name">토큰(보드게임 어플리케이션)</div>
+                      <div class="font-bold flex items-center project-name">토큰</div>
                       <div class="text-sm opacity-50">APP DESIGN</div>
                     </div>
                   </div>
                 </td>
-                <td>
+                <td class="hidden md:table-cell">
                   DESIGN 100%
                   <br />
                   <span class="badge badge-ghost badge-sm">FIGMA</span>
                 </td>
-                <td class="project-date">2023-04-24</td>
+                <td class="project-date hidden lg:table-cell">2023-04-24</td>
                 <th>
                   <label for="my-modal-3" class="btn btn-ghost btn-sm">open modal</label>
                 </th>
@@ -237,7 +205,7 @@
                     </div>
                   </div>
                 </td>
-                <td>
+                <td class="hidden md:table-cell">
                   CODING 100%, DESIGN 100%
                   <br />
                   <span class="badge badge-ghost badge-sm">FIGMA</span>
@@ -245,7 +213,7 @@
                   <span class="badge badge-ghost badge-sm">CSS</span>
                   <span class="badge badge-ghost badge-sm">JAVSCRIPT</span>
                 </td>
-                <td class="project-date">2023-04-12</td>
+                <td class="project-date hidden lg:table-cell">2023-04-12</td>
                 <th>
                   <label for="my-modal-2" class="btn btn-ghost btn-sm">open modal</label>
                 </th>
@@ -264,14 +232,14 @@
                     </div>
                   </div>
                 </td>
-                <td>
+                <td class="hidden md:table-cell">
                   CODING 100%
                   <br />
                   <span class="badge badge-ghost badge-sm">HTML</span>
                   <span class="badge badge-ghost badge-sm">CSS</span>
                   <span class="badge badge-ghost badge-sm">JAVSCRIPT</span>
                 </td>
-                <td class="project-date">2023-04-08</td>
+                <td class="project-date hidden lg:table-cell">2023-04-08</td>
                 <th>
                   <label for="my-modal-1" class="btn btn-ghost btn-sm">open modal</label>
                 </th>
@@ -279,6 +247,8 @@
             </tbody>
           </table>
         </div>
+
+        
       </div>
     </div>
   </div>
@@ -421,9 +391,7 @@
           <div>
             <h3 class="text-lg font-bold">TOKEN</h3>
             <p class="pt-4">가상의 어플리케이션인 <b>'TOKEN'</b>입니다.</p>
-            <p>Figma를 이용해 전체적인 디자인 모두 100% 직접 진행하였으며 <b>Figma의 대표적인 기능인 AutoLayout과 Component를 사용</b>해 구성하였기 때문에 유지보수에
-              아주
-              좋습니다.</p>
+            <p>Figma를 이용해 전체적인 디자인 모두 100% 직접 진행하였으며 <b>Figma의 대표적인 기능인 AutoLayout과 Component를 사용</b>해 구성하였기 때문에 유지보수에 아주 좋습니다.</p>
             <p>메인 색상 또한 Style로 지정하여 손쉽게 변경이 가능합니다.</p>
             <p class="pt-4">감사합니다. 🥰</p>
             <p></p>

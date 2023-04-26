@@ -23,66 +23,76 @@
   <!-- cursor -->
   <div class="flex h-screen">
     <!-- side menu -->
-    <div class="side-menu pt-14 relative z-20 hidden md:block">
-      <ul class="menu p-2 rounded-box">
+    <div class="relative z-20 hidden side-menu pt-14 md:block">
+      <ul class="p-2 menu rounded-box">
         <li class="btn-home">
-          <div class="tooltip tooltip-right" data-tip="Mainpage">
-            <div>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-              </svg>
+          <a href="./index.html">
+            <div class="tooltip tooltip-right" data-tip="Mainpage">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                </svg>
+              </div>
             </div>
-          </div>
+          </a>
         </li>
         <li class="btn-project-list">
-          <div class="tooltip tooltip-right" data-tip="Only Project List">
-            <div>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
+          <a href="./project.html">
+            <div class="tooltip tooltip-right" data-tip="Portfolio">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
             </div>
-          </div>
+          </a>
         </li>
         <li>
           <label class="tooltip tooltip-right" data-tip="Skills" for="skill-modal">
-            <div>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-              </svg>
-            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
           </label>
         </li>
       </ul>
     </div>
     <!-- main -->
-    <div class="flex flex-col px-2 flex-grow">
+    <div class="flex flex-col flex-grow px-2">
       <!-- top bar -->
       <div class="navbar">
         <div class="flex-1">
-          <a class="btn__side-menu btn btn-ghost normal-case">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-              class="inline-block w-5 h-5 stroke-current">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-              </path>
-            </svg>
-          </a>
-          <a class="btn btn-ghost normal-case text-xl" href="./index.html">GREENERY 🍀</a>
+          <div class="lg:hidden">
+            <div class="dropdown">
+              <label tabindex="0" class="btn btn-ghost">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                </svg>
+              </label>
+              <ul tabindex="0" class="p-2 mt-3 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+                <li><a href="./index.html">Homepage</a></li>
+                <li><a href="./project.html">Portfolio</a></li>
+                <li><label for="skill-modal">About</label></li>
+              </ul>
+            </div>
+          </div>
+          <a class="text-xl normal-case btn btn-ghost" href="./index.html">GREENERY 🍀</a>
         </div>
         <div class="flex-none mr-4 theme-swap-btn">
           <div>
             <label class="swap swap-rotate">
               <input type="checkbox" />
-              <svg class="swap-off fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <svg class="w-6 h-6 fill-current swap-off" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path
                   d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
               </svg>
-              <svg class="swap-on fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <svg class="w-6 h-6 fill-current swap-on" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path
                   d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
               </svg>
@@ -91,10 +101,10 @@
         </div>
       </div>
       <!-- contents -->
-      <div class="flex-grow flex flex-col gap-4 pb-2 overflow-auto">
+      <div class="flex flex-col flex-grow gap-4 pb-2 overflow-auto">
         <!-- contents__info -->
-        <div class="contents__info flex-shrink-0">
-          <div class="stats shadow w-full">
+        <div class="flex-shrink-0 contents__info">
+          <div class="w-full shadow stats">
             <div class="stat">
               <div class="stat-figure text-secondary">
                 <div class="avatar online">
@@ -111,7 +121,8 @@
           </div>
         </div>
         <!-- contents__chat -->
-        <div class="contents__chat bg-gray-100 bg-opacity-30 rounded-2xl shadow p-2 overflow-x-hidden flex-grow flex-shrink-0">
+        <div
+          class="flex-grow flex-shrink-0 p-2 overflow-x-hidden bg-gray-100 shadow contents__chat bg-opacity-30 rounded-2xl">
 
           <div class="chat chat-start" data-aos="fade-right">
             <div class="chat-image avatar">
@@ -156,9 +167,9 @@
         </div>
         <!-- project-table -->
 
-        <div class="w-full overflow-x-auto hidden sm:block">
-          <table class="project-table table w-full relative">
-            <thead class="sticky z-10 inset-0">
+        <div class="hidden w-full overflow-x-auto sm:block">
+          <table class="relative table w-full project-table">
+            <thead class="sticky inset-0 z-10">
               <tr>
                 <th>PROJECT</th>
                 <th class="hidden md:table-cell">PARTICIPATION IN WORK</th>
@@ -171,12 +182,12 @@
                 <td>
                   <div class="flex items-center space-x-3">
                     <div class="avatar">
-                      <div class="mask mask-squircle w-12 h-12">
+                      <div class="w-12 h-12 mask mask-squircle">
                         <img src="./img/token_ico.png" alt="portfolio" />
                       </div>
                     </div>
                     <div>
-                      <div class="font-bold flex items-center project-name">토큰</div>
+                      <div class="flex items-center font-bold project-name">토큰</div>
                       <div class="text-sm opacity-50">APP DESIGN</div>
                     </div>
                   </div>
@@ -186,7 +197,7 @@
                   <br />
                   <span class="badge badge-ghost badge-sm">FIGMA</span>
                 </td>
-                <td class="project-date hidden lg:table-cell">2023-04-24</td>
+                <td class="hidden project-date lg:table-cell">2023-04-24</td>
                 <th>
                   <label for="my-modal-3" class="btn btn-ghost btn-sm">open modal</label>
                 </th>
@@ -195,12 +206,12 @@
                 <td>
                   <div class="flex items-center space-x-3">
                     <div class="avatar">
-                      <div class="mask mask-squircle w-12 h-12">
+                      <div class="w-12 h-12 mask mask-squircle">
                         <img src="./img/technology_ico.png" alt="portfolio" />
                       </div>
                     </div>
                     <div>
-                      <div class="font-bold flex items-center project-name">TechnologY</div>
+                      <div class="flex items-center font-bold project-name">TechnologY</div>
                       <div class="text-sm opacity-50">WEB DESIGN&CODING</div>
                     </div>
                   </div>
@@ -213,7 +224,7 @@
                   <span class="badge badge-ghost badge-sm">CSS</span>
                   <span class="badge badge-ghost badge-sm">JAVSCRIPT</span>
                 </td>
-                <td class="project-date hidden lg:table-cell">2023-04-12</td>
+                <td class="hidden project-date lg:table-cell">2023-04-12</td>
                 <th>
                   <label for="my-modal-2" class="btn btn-ghost btn-sm">open modal</label>
                 </th>
@@ -222,12 +233,12 @@
                 <td>
                   <div class="flex items-center space-x-3">
                     <div class="avatar">
-                      <div class="mask mask-squircle w-12 h-12">
+                      <div class="w-12 h-12 mask mask-squircle">
                         <img src="./img/portfolio_ico.png" alt="portfolio" />
                       </div>
                     </div>
                     <div>
-                      <div class="font-bold flex items-center project-name">포트폴리오 페이지</div>
+                      <div class="flex items-center font-bold project-name">포트폴리오 페이지</div>
                       <div class="text-sm opacity-50">CODING</div>
                     </div>
                   </div>
@@ -239,7 +250,7 @@
                   <span class="badge badge-ghost badge-sm">CSS</span>
                   <span class="badge badge-ghost badge-sm">JAVSCRIPT</span>
                 </td>
-                <td class="project-date hidden lg:table-cell">2023-04-08</td>
+                <td class="hidden project-date lg:table-cell">2023-04-08</td>
                 <th>
                   <label for="my-modal-1" class="btn btn-ghost btn-sm">open modal</label>
                 </th>
@@ -248,7 +259,7 @@
           </table>
         </div>
 
-        
+
       </div>
     </div>
   </div>
@@ -259,29 +270,29 @@
 
   <input type="checkbox" id="skill-modal" class="modal-toggle" />
   <div class="modal">
-    <div class="modal-box w-11/12 max-w-5xl relative">
-      <label for="skill-modal" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-      <h3 class="font-bold text-lg">제가 자신있는 기술은요,</h3>
-      <div class="my-4 flex gap-4">
+    <div class="relative w-11/12 max-w-5xl modal-box">
+      <label for="skill-modal" class="absolute btn btn-sm btn-circle right-2 top-2">✕</label>
+      <h3 class="text-lg font-bold">제가 자신있는 기술은요,</h3>
+      <div class="flex flex-wrap gap-4 my-4">
         <div class="myskill">
-          <div class="radial-progress text-gray-400" style="--value:90; --size:6rem; --thickness: 2px;">90%</div>
-          <div class="skill-name text-center font-bold mt-2">HTML</div>
+          <div class="text-gray-400 radial-progress" style="--value:90; --size:6rem; --thickness: 2px;">90%</div>
+          <div class="mt-2 font-bold text-center skill-name">HTML</div>
         </div>
         <div class="myskill">
-          <div class="radial-progress text-gray-400" style="--value:85; --size:6rem; --thickness: 2px;">85%</div>
-          <div class="skill-name text-center font-bold mt-2">CSS</div>
+          <div class="text-gray-400 radial-progress" style="--value:85; --size:6rem; --thickness: 2px;">85%</div>
+          <div class="mt-2 font-bold text-center skill-name">CSS</div>
         </div>
         <div class="myskill">
-          <div class="radial-progress text-gray-400" style="--value:70; --size:6rem; --thickness: 2px;">70%</div>
-          <div class="skill-name text-center font-bold mt-2">JS(JQUERY)</div>
+          <div class="text-gray-400 radial-progress" style="--value:70; --size:6rem; --thickness: 2px;">70%</div>
+          <div class="mt-2 font-bold text-center skill-name">JS(JQUERY)</div>
         </div>
         <div class="myskill">
-          <div class="radial-progress text-gray-400" style="--value:80; --size:6rem; --thickness: 2px;">80%</div>
-          <div class="skill-name text-center font-bold mt-2">PHOTOSHOP</div>
+          <div class="text-gray-400 radial-progress" style="--value:80; --size:6rem; --thickness: 2px;">80%</div>
+          <div class="mt-2 font-bold text-center skill-name">PHOTOSHOP</div>
         </div>
         <div class="myskill">
-          <div class="radial-progress text-gray-400" style="--value:80; --size:6rem; --thickness: 2px;">80%</div>
-          <div class="skill-name text-center font-bold mt-2">FIGMA</div>
+          <div class="text-gray-400 radial-progress" style="--value:80; --size:6rem; --thickness: 2px;">80%</div>
+          <div class="mt-2 font-bold text-center skill-name">FIGMA</div>
         </div>
       </div>
       <p>사실 퍼센트로 표현하기엔 아주 주관적인 수치지만, 적어도 이만큼은 자신있다는 뜻이라고 봐주시면 감사하겠습니다! 😉</p>
@@ -297,20 +308,20 @@
   <!-- email modal -->
   <input type="checkbox" id="email-modal" class="modal-toggle" />
   <div class="modal">
-    <div class="modal-box relative">
-      <label for="email-modal" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+    <div class="relative modal-box">
+      <label for="email-modal" class="absolute btn btn-sm btn-circle right-2 top-2">✕</label>
       <h3 class="text-lg font-bold">저에게 메일을 보내주세요!</h3>
-      <form class="form-control w-full my-4" onsubmit="sendEmailForm(this); return false;"
+      <form class="w-full my-4 form-control" onsubmit="sendEmailForm(this); return false;"
         action="https://formspree.io/f/xeqwkbkw" method="POST">
         <label class="label">
           <span class="label-text">Your Email</span>
         </label>
-        <input class="input input-bordered w-full" type="email" name="email" placeholder="회신을 원하는 이메일 주소">
+        <input class="w-full input input-bordered" type="email" name="email" placeholder="회신을 원하는 이메일 주소">
         <label class="label">
           <span class="label-text">Your Message</span>
         </label>
         <textarea class="textarea textarea-bordered" name="message"></textarea>
-        <button class="btn mt-4" type="submit">Send</button>
+        <button class="mt-4 btn" type="submit">Send</button>
       </form>
     </div>
   </div>
@@ -320,8 +331,8 @@
   <!-- project modals -->
   <input type="checkbox" id="my-modal-1" class="modal-toggle" />
   <div class="modal">
-    <div class="modal-box relative">
-      <label for="my-modal-1" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+    <div class="relative modal-box">
+      <label for="my-modal-1" class="absolute btn btn-sm btn-circle right-2 top-2">✕</label>
       <h3 class="text-lg font-bold">포트폴리오 페이지</h3>
       <p class="py-4">저를 소개하고, 제가 참여했던 프로젝트들과 연습 작품들을 전시할 수 있는 공간입니다. 이 페이지는 계속해서 업데이트 중입니다. tailwind.css와 daisyui를 이용하여
         구성하였습니다.</p>
@@ -331,13 +342,13 @@
         <div class="badge badge-primary">CSS</div>
         <div class="badge badge-secondary">JAVASCRIPT</div>
       </div>
-      <div class="mockup-window border border-base-300">
+      <div class="border mockup-window border-base-300">
         <div class="flex justify-center border-t border-base-300">
           <img src="./img/portfolio.png" alt="portfolio">
         </div>
       </div>
       <br>
-      <div class="btn-group float-right">
+      <div class="float-right btn-group">
         <button class="btn btn-primary" onclick="window.open('https://github.com/greeenery/greenery')">GITHUB</button>
         <button class="btn" onclick="window.open('https://greeenery.github.io/greenery/')">PAGE</button>
       </div>
@@ -346,8 +357,8 @@
 
   <input type="checkbox" id="my-modal-2" class="modal-toggle" />
   <div class="modal">
-    <div class="modal-box relative">
-      <label for="my-modal-2" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+    <div class="relative modal-box">
+      <label for="my-modal-2" class="absolute btn btn-sm btn-circle right-2 top-2">✕</label>
       <h3 class="text-lg font-bold">TechnologY</h3>
       <p class="pt-4">가상의 회사인 <b>'TechnologY'</b>의 메인페이지입니다.</p>
       <p>실존하는 회사가 아니기에 페이지에 들어간 텍스트는 모두 더미텍스트로 대체하였습니다.</p>
@@ -362,13 +373,13 @@
         <div class="badge badge-secondary">JAVASCRIPT</div>
         <div class="badge badge-accent">FIGMA</div>
       </div>
-      <div class="mockup-window border border-base-300">
+      <div class="border mockup-window border-base-300">
         <div class="flex justify-center border-t border-base-300">
           <img src="./img/technology.png" alt="technology">
         </div>
       </div>
       <br>
-      <div class="btn-group float-right">
+      <div class="float-right btn-group">
         <button class="btn btn-secondary"
           onclick="window.open('https://www.figma.com/file/I8IElFungd2W8qcZqlx4lY/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4?node-id=0%3A1&t=5bRDpRTV4LaKDYT4-1')">FIGMA</button>
         <button class="btn btn-primary" onclick="window.open('https://github.com/greeenery/technologY')">GITHUB</button>
@@ -379,11 +390,11 @@
 
   <input type="checkbox" id="my-modal-3" class="modal-toggle" />
   <div class="modal">
-    <div class="modal-box w-11/12 max-w-5xl relative">
-      <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+    <div class="relative w-11/12 max-w-5xl modal-box">
+      <label for="my-modal-3" class="absolute btn btn-sm btn-circle right-2 top-2">✕</label>
       <div class="flex gap-4">
         <div class="flex justify-center">
-          <div class="border-4 border-gray-600 rounded-2xl overflow-hidden">
+          <div class="overflow-hidden border-4 border-gray-600 rounded-2xl">
             <img src="./img/token.png" alt="token">
           </div>
         </div>
@@ -391,7 +402,8 @@
           <div>
             <h3 class="text-lg font-bold">TOKEN</h3>
             <p class="pt-4">가상의 어플리케이션인 <b>'TOKEN'</b>입니다.</p>
-            <p>Figma를 이용해 전체적인 디자인 모두 100% 직접 진행하였으며 <b>Figma의 대표적인 기능인 AutoLayout과 Component를 사용</b>해 구성하였기 때문에 유지보수에 아주 좋습니다.</p>
+            <p>Figma를 이용해 전체적인 디자인 모두 100% 직접 진행하였으며 <b>Figma의 대표적인 기능인 AutoLayout과 Component를 사용</b>해 구성하였기 때문에 유지보수에
+              아주 좋습니다.</p>
             <p>메인 색상 또한 Style로 지정하여 손쉽게 변경이 가능합니다.</p>
             <p class="pt-4">감사합니다. 🥰</p>
             <p></p>
@@ -400,7 +412,7 @@
             </div>
           </div>
           <div>
-            <div class="btn-group float-right">
+            <div class="float-right btn-group">
               <button class="btn btn-secondary"
                 onclick="window.open('https://www.figma.com/file/mhqwmouxRKaTrWFgUY4d5Q/%EB%B3%B4%EB%93%9C%EA%B2%8C%EC%9E%84-%EB%A7%A4%EB%8B%88%EC%95%84%EB%A5%BC-%EC%9C%84%ED%95%9C-%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98?node-id=7%3A1226&t=gvNckRk9PAs0fT6L-1')">FIGMA</button>
               <button class="btn btn-primary"

@@ -5,16 +5,6 @@ AOS.init({
 
 
 function NavFunction__init() {
-  // project-list
-  $(".btn-project-list").click(function () {
-    $(".contents__info").addClass("hidden");
-    $(".contents__chat").addClass("hidden");
-  });
-  $(".btn-home").click(function () {
-    $(".contents__info").removeClass("hidden");
-    $(".contents__chat").removeClass("hidden");
-  });
-
 
   // theme
   $(".theme-swap-btn svg").click(function (event) {
@@ -74,3 +64,14 @@ function sendEmailForm(form) {
 }
 
 
+
+function ProjectCard__init() {
+  $(".project-card button").click(function () {
+    let indexNum = $(this).closest(".project-card").index();
+    console.log(indexNum);
+    $(".portfolio-list").addClass("hidden");
+    $(".portfolio-list").eq(indexNum - 1).removeClass("hidden");
+  });
+}
+
+ProjectCard__init();

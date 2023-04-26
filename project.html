@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GREENERY</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/daisyui/2.46.1/full.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favi.png">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/script.js" defer></script>
+
+</head>
+
+<body>
+
+  <!-- cursor -->
+  <div class="flex h-screen">
+    <!-- side menu -->
+    <div class="relative z-20 hidden side-menu pt-14 lg:block">
+      <ul class="p-2 menu rounded-box">
+        <li class="btn-home">
+          <a href="./index.html">
+            <div class="tooltip tooltip-right" data-tip="Mainpage">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                </svg>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="btn-project-list">
+          <a href="./project.html">
+            <div class="tooltip tooltip-right" data-tip="Portfolio">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <label class="tooltip tooltip-right" data-tip="Skills" for="skill-modal">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+          </label>
+        </li>
+      </ul>
+    </div>
+    <!-- main -->
+    <div class="flex flex-col flex-grow max-w-full px-2">
+      <!-- top bar -->
+      <div class="navbar">
+        <div class="flex-1">
+          <div class="lg:hidden">
+            <div class="dropdown">
+              <label tabindex="0" class="btn btn-ghost">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                </svg>
+              </label>
+              <ul tabindex="0" class="p-2 mt-3 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+                <li><a href="./index.html">Homepage</a></li>
+                <li><a href="./project.html">Portfolio</a></li>
+                <li><label for="skill-modal">About</label></li>
+              </ul>
+            </div>
+          </div>
+          <a class="text-xl normal-case btn btn-ghost" href="./index.html">GREENERY 🍀</a>
+        </div>
+        <div class="flex-none mr-4 theme-swap-btn">
+          <div>
+            <label class="swap swap-rotate">
+              <input type="checkbox" />
+              <svg class="w-6 h-6 fill-current swap-off" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
+              </svg>
+              <svg class="w-6 h-6 fill-current swap-on" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
+              </svg>
+            </label>
+          </div>
+        </div>
+      </div>
+      <!-- contents -->
+      <div class="flex flex-col flex-grow gap-4 pb-2 overflow-auto lg:flex-row">
+        <!-- project-list -->
+        <div class="flex flex-shrink-0 w-full gap-4 p-2 overflow-auto lg:w-80 lg:flex-col lg:h-auto">
+
+          <p class="hidden font-bold text-center lg:block">마우스를 올려주세요 🥰</p>
+
+          <div class="relative h-40 overflow-hidden shadow-md cursor-default project-card rounded-xl">
+            <div class="absolute inset-0 p-4 text-white bg-black project-card__content">
+              <div class="flex items-center gap-2 text-2xl font-bold">
+                TechnologY
+                <div class="badge badge-secondary">WEB</div>
+              </div>
+              <p class="mt-2">가상의 회사의 홈페이지를 직접 디자인, 코딩하였습니다. 반응형 페이지입니다.</p>
+              <button class="float-right mt-2 btn btn-sm btn-primary">GO!</button>
+            </div>
+            <img class="block object-cover w-full h-full" src="./img/technology.png" alt="technology">
+          </div>
+
+
+          <div class="relative h-40 overflow-hidden shadow-md cursor-default project-card rounded-xl">
+            <div class="absolute inset-0 p-4 text-white bg-black project-card__content">
+              <div class="flex items-center gap-2 text-2xl font-bold">
+                Token
+                <div class="badge badge-warning">APP</div>
+              </div>
+              <p class="mt-2">보드게임 매니아를 위한 가상의 어플리케이션입니다. 피그마로 디자인하였습니다.</p>
+              <button class="float-right mt-2 btn btn-sm btn-primary">GO!</button>
+            </div>
+            <img class="block object-cover object-bottom w-full h-full" src="./img/token.png" alt="token">
+          </div>
+
+
+          <div class="relative h-40 overflow-hidden shadow-md cursor-default project-card rounded-xl">
+            <div class="absolute inset-0 p-4 text-white bg-black project-card__content">
+              <div class="flex items-center gap-2 text-2xl font-bold">
+                Portfolio
+                <div class="badge badge-secondary">WEB</div>
+              </div>
+              <p class="mt-2">저를 소개하는 포트폴리오 페이지입니다. 계속해서 업데이트 중입니다.</p>
+              <button class="float-right mt-2 btn btn-sm btn-primary">GO!</button>
+            </div>
+            <img class="block object-cover w-full h-full" src="./img/portfolio.png" alt="portfolio">
+          </div>
+
+
+        </div>
+        <!-- project-detail -->
+
+        <div class="flex-grow p-4 overflow-y-auto">
+          <div class="portfolio-list">
+            <div class="text-2xl font-bold">TechnologY</div>
+            <div>
+              <div class="badge">HTML</div>
+              <div class="badge badge-primary">CSS</div>
+              <div class="badge badge-secondary">JAVASCRIPT</div>
+              <div class="badge badge-accent">FIGMA</div>
+            </div>
+
+            <div class="max-w-6xl my-4 mockup-window bg-base-300">
+              <div class="flex justify-center bg-base-200">
+                <img class="block w-full" src="./img/technology.png" alt="technology">
+              </div>
+            </div>
+
+            <div class="p-4">
+              <p>가상의 회사인 <b>'TechnologY'</b>의 메인페이지입니다.</p>
+              <p>실존하는 회사가 아니기에 페이지에 들어간 텍스트는 모두 더미텍스트로 대체하였습니다.</p>
+              <p>Figma를 이용해 전체적인 디자인 또한 100% 직접 진행하였으며 <b>Figma의 대표적인 기능인 AutoLayout을 사용</b>해 레이아웃을 구성하였기 때문에 유지보수에 아주
+                좋습니다.</p>
+              <p><b>반응형으로 구현된 페이지</b>이며 고정된 헤더는 스크롤을 내릴 경우 모습을 감추게 되고 올릴 경우 다시 나타나 뷰포트가 작은 기기에서의 불편함을 덜어주도록 구성하였습니다.</p>
+              <p>모바일 사이드 메뉴는 화면이 줄어들었을 때 확인하실 수 있습니다.</p>
+              <p class="pt-4">감사합니다. 🥰</p>
+              <br>
+              <div class="float-right btn-group">
+                <button class="btn btn-primary"
+                  onclick="window.open('https://github.com/greeenery/greenery')">GITHUB</button>
+                <button class="btn" onclick="window.open('https://greeenery.github.io/greenery/')">PAGE</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="hidden portfolio-list">
+            <div class="text-2xl font-bold">TOKEN</div>
+            <div>
+              <div class="badge badge-accent">FIGMA</div>
+            </div>
+            <div class="flex gap-4">
+              <div class="pt-4">
+                <div class="overflow-hidden border-4 border-gray-600 rounded-2xl">
+                  <img src="./img/token.png" alt="token">
+                </div>
+              </div>
+              <div class="flex flex-col justify-between">
+                <div>
+                  <p class="pt-4">가상의 어플리케이션인 <b>'TOKEN'</b>입니다.</p>
+                  <p>Figma를 이용해 전체적인 디자인 모두 100% 직접 진행하였으며 <b>Figma의 대표적인 기능인 AutoLayout과 Component를 사용</b>해 구성하였기 때문에
+                    유지보수에
+                    아주 좋습니다.</p>
+                  <p>메인 색상 또한 Style로 지정하여 손쉽게 변경이 가능합니다.</p>
+                  <p class="pt-4">감사합니다. 🥰</p>
+                </div>
+                <div>
+                  <div class="float-right btn-group">
+                    <button class="btn btn-secondary"
+                      onclick="window.open('https://www.figma.com/file/mhqwmouxRKaTrWFgUY4d5Q/%EB%B3%B4%EB%93%9C%EA%B2%8C%EC%9E%84-%EB%A7%A4%EB%8B%88%EC%95%84%EB%A5%BC-%EC%9C%84%ED%95%9C-%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98?node-id=7%3A1226&t=gvNckRk9PAs0fT6L-1')">FIGMA</button>
+                    <button class="btn btn-primary"
+                      onclick="window.open('https://www.figma.com/proto/mhqwmouxRKaTrWFgUY4d5Q/%EB%B3%B4%EB%93%9C%EA%B2%8C%EC%9E%84-%EB%A7%A4%EB%8B%88%EC%95%84%EB%A5%BC-%EC%9C%84%ED%95%9C-%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98?page-id=50%3A1179&node-id=50-1180&viewport=697%2C787%2C0.33&scaling=scale-down&starting-point-node-id=50%3A1180')">PROTOTYPE</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="hidden portfolio-list">
+            <div class="text-2xl font-bold">포트폴리오 페이지</div>
+            <div>
+              <div class="badge">HTML</div>
+              <div class="badge badge-primary">CSS</div>
+              <div class="badge badge-secondary">JAVASCRIPT</div>
+            </div>
+
+            <div class="max-w-6xl my-4 mockup-window bg-base-300">
+              <div class="flex justify-center bg-base-200">
+                <img class="block w-full" src="./img/portfolio.png" alt="portfolio">
+              </div>
+            </div>
+
+            <div class="p-4">
+              <p>저를 소개하고, 제가 참여했던 프로젝트들과 연습 작품들을 전시할 수 있는 공간입니다. 이 페이지는 계속해서 업데이트 중입니다. tailwind.css와
+                daisyui를 이용하여
+                구성하였습니다.</p>
+              <p>계속 발전하는 모습 보여드릴 수 있도록 노력하겠습니다.</p>
+              <br>
+              <div class="float-right btn-group">
+                <button class="btn btn-primary"
+                  onclick="window.open('https://github.com/greeenery/greenery')">GITHUB</button>
+                <button class="btn" onclick="window.open('https://greeenery.github.io/greenery/')">PAGE</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- skill modal -->
+
+  <input type="checkbox" id="skill-modal" class="modal-toggle" />
+  <div class="modal">
+    <div class="relative w-11/12 max-w-5xl modal-box">
+      <label for="skill-modal" class="absolute btn btn-sm btn-circle right-2 top-2">✕</label>
+      <h3 class="text-lg font-bold">제가 자신있는 기술은요,</h3>
+      <div class="flex flex-wrap gap-4 my-4">
+        <div class="myskill">
+          <div class="text-gray-400 radial-progress" style="--value:90; --size:6rem; --thickness: 2px;">90%</div>
+          <div class="mt-2 font-bold text-center skill-name">HTML</div>
+        </div>
+        <div class="myskill">
+          <div class="text-gray-400 radial-progress" style="--value:85; --size:6rem; --thickness: 2px;">85%</div>
+          <div class="mt-2 font-bold text-center skill-name">CSS</div>
+        </div>
+        <div class="myskill">
+          <div class="text-gray-400 radial-progress" style="--value:70; --size:6rem; --thickness: 2px;">70%</div>
+          <div class="mt-2 font-bold text-center skill-name">JS(JQUERY)</div>
+        </div>
+        <div class="myskill">
+          <div class="text-gray-400 radial-progress" style="--value:80; --size:6rem; --thickness: 2px;">80%</div>
+          <div class="mt-2 font-bold text-center skill-name">PHOTOSHOP</div>
+        </div>
+        <div class="myskill">
+          <div class="text-gray-400 radial-progress" style="--value:80; --size:6rem; --thickness: 2px;">80%</div>
+          <div class="mt-2 font-bold text-center skill-name">FIGMA</div>
+        </div>
+      </div>
+      <p>사실 퍼센트로 표현하기엔 아주 주관적인 수치지만, 적어도 이만큼은 자신있다는 뜻이라고 봐주시면 감사하겠습니다! 😉</p>
+      <p>배우고 성취하는 것을 아주 좋아하는 성격이라 쑥쑥 성장하고 있습니다!</p>
+      <p class="mt-2">p.s. 퍼블리싱 강사 경험이 있어, 기초는 아주 탄탄하답니다. 🤗</p>
+    </div>
+  </div>
+
+
+
+
+
+</body>
+
+</html>

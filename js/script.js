@@ -15,7 +15,7 @@ function NavFunction__init() {
     }
   });
 }
-NavFunction__init();
+// NavFunction__init();
 
 
 function NewProjectChecker__init() {

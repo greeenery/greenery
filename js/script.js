@@ -72,6 +72,10 @@ function ProjectCard__init() {
     $(".portfolio-list").addClass("hidden");
     $(".portfolio-list").eq(indexNum - 1).removeClass("hidden");
   });
+
+  $(".btn-go").click(function(){
+    $(".project-detail").scrollTop(0);
+  });
 }
 
 ProjectCard__init();

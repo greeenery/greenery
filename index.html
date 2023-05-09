@@ -171,7 +171,7 @@
                 <th>PROJECT</th>
                 <th class="hidden md:table-cell">PARTICIPATION IN WORK</th>
                 <th class="hidden lg:table-cell">DATE</th>
-                <th></th>
+                <th>LINK</th>
               </tr>
             </thead>
             <tbody>
@@ -199,6 +199,8 @@
                 </td>
                 <td class="hidden project-date lg:table-cell">2023-05-06</td>
                 <th>
+                  <button class="btn btn-sm btn-outline"
+                    onclick="window.open('https://www.figma.com/file/te8bTXyYSIh6M51XsVvCde/%ED%85%9C%ED%94%8C%EB%A6%BF?node-id=0%3A1&t=MHly5UvSrXxKI9P0-1')">FIGMA</button>
                 </th>
               </tr>
               <tr>
@@ -222,7 +224,12 @@
                 </td>
                 <td class="hidden project-date lg:table-cell">2023-04-24</td>
                 <th>
-                  <label for="my-modal-3" class="btn btn-ghost btn-sm">open modal</label>
+                  <div class="btn-group">
+                    <button class="btn btn-sm btn-outline"
+                      onclick="window.open('https://www.figma.com/file/mhqwmouxRKaTrWFgUY4d5Q/%EB%B3%B4%EB%93%9C%EA%B2%8C%EC%9E%84-%EB%A7%A4%EB%8B%88%EC%95%84%EB%A5%BC-%EC%9C%84%ED%95%9C-%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98?node-id=7%3A1226&t=gvNckRk9PAs0fT6L-1')">FIGMA</button>
+                    <button class="btn btn-sm"
+                      onclick="window.open('https://www.figma.com/proto/mhqwmouxRKaTrWFgUY4d5Q/%EB%B3%B4%EB%93%9C%EA%B2%8C%EC%9E%84-%EB%A7%A4%EB%8B%88%EC%95%84%EB%A5%BC-%EC%9C%84%ED%95%9C-%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98?page-id=50%3A1179&node-id=50-1180&viewport=697%2C787%2C0.33&scaling=scale-down&starting-point-node-id=50%3A1180')">PROTOTYPE</button>
+                  </div>
                 </th>
               </tr>
               <tr>
@@ -249,7 +256,11 @@
                 </td>
                 <td class="hidden project-date lg:table-cell">2023-04-12</td>
                 <th>
-                  <label for="my-modal-2" class="btn btn-ghost btn-sm">open modal</label>
+                  <div class="btn-group">
+                    <button class="btn btn-sm btn-outline"
+                      onclick="window.open('https://www.figma.com/file/I8IElFungd2W8qcZqlx4lY/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4?node-id=0%3A1&t=5bRDpRTV4LaKDYT4-1')">FIGMA</button>
+                    <button class="btn btn-sm" onclick="window.open('https://greeenery.github.io/technologY/')">HOMEPAGE</button>
+                  </div>
                 </th>
               </tr>
               <tr>
@@ -275,7 +286,7 @@
                 </td>
                 <td class="hidden project-date lg:table-cell">2023-04-08</td>
                 <th>
-                  <label for="my-modal-1" class="btn btn-ghost btn-sm">open modal</label>
+                  <button class="btn btn-sm" onclick="window.open('https://greeenery.github.io/greenery/')">HOMEPAGE</button>
                 </th>
               </tr>
               <tr>
@@ -373,104 +384,6 @@
   </div>
 
 
-
-
-  <!-- 030506 project modals 다 지우고 링크로 대체할 예정 -->
-  <!-- project modals -->
-  <input type="checkbox" id="my-modal-1" class="modal-toggle" />
-  <div class="modal">
-    <div class="relative modal-box">
-      <label for="my-modal-1" class="absolute btn btn-sm btn-circle right-2 top-2">✕</label>
-      <h3 class="text-lg font-bold">포트폴리오 페이지</h3>
-      <p class="py-4">저를 소개하고, 제가 참여했던 프로젝트들과 연습 작품들을 전시할 수 있는 공간입니다. 이 페이지는 계속해서 업데이트 중입니다. tailwind.css와 daisyui를 이용하여
-        구성하였습니다.</p>
-      <p>계속 발전하는 모습 보여드릴 수 있도록 노력하겠습니다.</p>
-      <div class="my-5">
-        <div class="badge">HTML</div>
-        <div class="badge badge-primary">CSS</div>
-        <div class="badge badge-secondary">JAVASCRIPT</div>
-      </div>
-      <div class="border mockup-window border-base-300">
-        <div class="flex justify-center border-t border-base-300">
-          <img src="./img/project__01.png" alt="project__01">
-        </div>
-      </div>
-      <br>
-      <div class="float-right btn-group">
-        <button class="btn btn-primary" onclick="window.open('https://github.com/greeenery/greenery')">GITHUB</button>
-        <button class="btn" onclick="window.open('https://greeenery.github.io/greenery/')">PAGE</button>
-      </div>
-    </div>
-  </div>
-
-  <input type="checkbox" id="my-modal-2" class="modal-toggle" />
-  <div class="modal">
-    <div class="relative modal-box">
-      <label for="my-modal-2" class="absolute btn btn-sm btn-circle right-2 top-2">✕</label>
-      <h3 class="text-lg font-bold">TechnologY</h3>
-      <p class="pt-4">가상의 회사인 <b>'TechnologY'</b>의 메인페이지입니다.</p>
-      <p>실존하는 회사가 아니기에 페이지에 들어간 텍스트는 모두 더미텍스트로 대체하였습니다.</p>
-      <p>Figma를 이용해 전체적인 디자인 또한 100% 직접 진행하였으며 <b>Figma의 대표적인 기능인 AutoLayout을 사용</b>해 레이아웃을 구성하였기 때문에 유지보수에 아주 좋습니다.</p>
-      <p><b>반응형으로 구현된 페이지</b>이며 고정된 헤더는 스크롤을 내릴 경우 모습을 감추게 되고 올릴 경우 다시 나타나 뷰포트가 작은 기기에서의 불편함을 덜어주도록 구성하였습니다.</p>
-      <p>모바일 사이드 메뉴는 화면이 줄어들었을 때 확인하실 수 있습니다.</p>
-      <p class="pt-4">감사합니다. 🥰</p>
-      <p></p>
-      <div class="my-5">
-        <div class="badge">HTML</div>
-        <div class="badge badge-primary">CSS</div>
-        <div class="badge badge-secondary">JAVASCRIPT</div>
-        <div class="badge badge-accent">FIGMA</div>
-      </div>
-      <div class="border mockup-window border-base-300">
-        <div class="flex justify-center border-t border-base-300">
-          <img src="./img/project__02.png" alt="project__02">
-        </div>
-      </div>
-      <br>
-      <div class="float-right btn-group">
-        <button class="btn btn-secondary"
-          onclick="window.open('https://www.figma.com/file/I8IElFungd2W8qcZqlx4lY/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4?node-id=0%3A1&t=5bRDpRTV4LaKDYT4-1')">FIGMA</button>
-        <button class="btn btn-primary" onclick="window.open('https://github.com/greeenery/technologY')">GITHUB</button>
-        <button class="btn" onclick="window.open('https://greeenery.github.io/technologY/')">PAGE</button>
-      </div>
-    </div>
-  </div>
-
-  <input type="checkbox" id="my-modal-3" class="modal-toggle" />
-  <div class="modal">
-    <div class="relative w-11/12 max-w-5xl modal-box">
-      <label for="my-modal-3" class="absolute btn btn-sm btn-circle right-2 top-2">✕</label>
-      <div class="flex gap-4">
-        <div class="flex justify-center">
-          <div class="overflow-hidden border-4 border-gray-600 rounded-2xl">
-            <img src="./img/token.png" alt="token">
-          </div>
-        </div>
-        <div class="flex flex-col justify-between">
-          <div>
-            <h3 class="text-lg font-bold">TOKEN</h3>
-            <p class="pt-4">가상의 어플리케이션인 <b>'TOKEN'</b>입니다.</p>
-            <p>Figma를 이용해 전체적인 디자인 모두 100% 직접 진행하였으며 <b>Figma의 대표적인 기능인 AutoLayout과 Component를 사용</b>해 구성하였기 때문에 유지보수에
-              아주 좋습니다.</p>
-            <p>메인 색상 또한 Style로 지정하여 손쉽게 변경이 가능합니다.</p>
-            <p class="pt-4">감사합니다. 🥰</p>
-            <p></p>
-            <div class="my-5">
-              <div class="badge badge-accent">FIGMA</div>
-            </div>
-          </div>
-          <div>
-            <div class="float-right btn-group">
-              <button class="btn btn-secondary"
-                onclick="window.open('https://www.figma.com/file/mhqwmouxRKaTrWFgUY4d5Q/%EB%B3%B4%EB%93%9C%EA%B2%8C%EC%9E%84-%EB%A7%A4%EB%8B%88%EC%95%84%EB%A5%BC-%EC%9C%84%ED%95%9C-%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98?node-id=7%3A1226&t=gvNckRk9PAs0fT6L-1')">FIGMA</button>
-              <button class="btn btn-primary"
-                onclick="window.open('https://www.figma.com/proto/mhqwmouxRKaTrWFgUY4d5Q/%EB%B3%B4%EB%93%9C%EA%B2%8C%EC%9E%84-%EB%A7%A4%EB%8B%88%EC%95%84%EB%A5%BC-%EC%9C%84%ED%95%9C-%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98?page-id=50%3A1179&node-id=50-1180&viewport=697%2C787%2C0.33&scaling=scale-down&starting-point-node-id=50%3A1180')">PROTOTYPE</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
 
 
